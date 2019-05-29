@@ -1,0 +1,219 @@
+<!DOCTYPE>
+<html>
+<style>
+
+
+.box {
+  margin: 20px auto;
+  width: 400px; 
+  height: 450px; 
+	margin-right: 200px;
+	margin-top:10px;
+  -webkit-border-radius: 8px/7px; 
+  -moz-border-radius: 8px/7px; 
+  border-radius: 8px/7px; 
+  background-color:Gainsboro; 
+  <!-- -webkit-box-shadow: 1px 2px 5px #006400; 
+  -moz-box-shadow: 1px 2px 5px #006400; 
+  box-shadow: 1px 2px 5px #006400;  -->
+  border: solid 1px gray;
+}
+body
+{
+	
+	background-image: url('/static/review.jpg');
+	background-size: cover;
+	<!-- height:50%; -->
+	
+}
+h3
+{
+	color:black;
+		
+}
+#s{
+  margin-top: 0px;
+  margin-left: 25%;
+  margin-right:25%;
+  border-radius: 8px/7px;
+  border: 2px solid gray;
+  padding: 20px; 
+  width: 225px;
+  height: 100px; 
+  <!-- box-shadow: 1px 2px 5px #006400;  -->
+  
+  
+
+}
+#u{
+  margin-top: 0px;
+  margin-left: 25%;
+  margin-right:25%;
+  border-radius: 8px/7px;
+  border: 2px solid gray;
+  padding: 20px; 
+  width: 225px;
+  height: 05px; 
+  <!-- box-shadow: 1px 2px 5px #006400;  -->
+  background-color:Gainsboro 	;
+  
+
+}
+t{
+  background-color: Gainsboro  /* Green */
+  border: none;
+ <!--  color: white; -->
+  
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left:25%;
+}
+.t1 {
+  background-color: Gainsboro ; 
+  color: black; 
+  border: 2px solid gray;
+  margin-left:45%;
+  margin-top:5%;
+}
+
+.t1:hover {
+	opacity: 1;
+  background-color: black;
+  color: white;
+}
+h1{	
+	align:right;
+	margin-right:350px;
+	margin-top:20px;
+}
+
+</style>
+<body>
+<h1 align="right">           REVIEW</h1>
+<div class="box" style="float:right;position:relative;">
+        
+
+<form action="{{ url_for('sentiment') }}" method='POST' >
+
+ <h4 align="center">USER NAME</h4>
+<input type="text" id="U" align="center"  value={{msg2}} name="email"/></br>
+<h4 align="center">NETWORK</h4>
+<input type="text" id="U" align="center" value={{msg3}} name="net"/></br> 
+
+ <h4 align="center">ENTER YOUR REVIEW</h4>
+<textarea type="text" name="review" id="s" align="center" placeholder="write your review here" height="200px"/></textarea>
+
+
+<input type="submit" value="SUBMIT" id="t" class="t t1"	/></br>
+<!-- </fieldset> -->
+</form>
+
+</div>
+
+<!-- <img style="width:15%;height:25%; float:left;" src="/static/review.jpg"> -->
+</body>
+</html>
+
+
+
+<html>
+
+<!-- <h5 align="center"> ----------------------------- RATE THE NETWORK ------------------------------ </h5>
+<style>
+button{
+  background-color: #006400; /* Green */
+  border: none;
+  color: white;
+  
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+ 
+ }
+ .button1 {
+  background-color: white; 
+  color: black; 
+  border: 5px solid #006400;
+  float:left;
+ 
+}
+
+.button1:hover {
+  background-color: #006400;
+  color: white;
+}
+#k
+{
+	
+	visibility:visible;
+	text-align:center;
+	
+	float:left;
+	height: 50px;
+	width: 100 px;
+	background-color:dark;
+	border-radius: 45%;
+	border:5px solid #73AD21;
+	border-color:white;
+	
+	<!---webkit-text-stroke-width:1px;
+	-webkit-text-stroke-color:black;-->
+	
+<!-- }
+.boxx {
+  margin: 20px auto;
+  width: 590px; 
+  height: 60px; 
+  -webkit-border-radius: 8px/7px; 
+  -moz-border-radius: 8px/7px; 
+  border-radius: 8px/7px; 
+  background-color:white; 
+  -webkit-box-shadow: 1px 2px 5px #006400; 
+  -moz-box-shadow: 1px 2px 5px #006400; 
+  box-shadow: 1px 2px 5px #006400; 
+  border: 2px solid #73AD21;
+}
+ -->
+</style>
+<!--<select>
+	<!--<option value="good">GOOD</option>
+	<option value="very good"> VERY GOOD</option>
+	<option value="excellent">excellent</option>
+	<option value="bad">BAD</option>
+	<option value="worst">WORST</option>--><!-- <div class="boxx"> -->
+	<!-- <option >
+	<form action="{{ url_for('excellent') }}" method='POST' id="k" align="center" >
+	<input type="submit" value="EXCELLENT" id="k" class="button button1"/></br>
+	</form> 
+	
+	<form action="{{ url_for('best') }}" method='POST' id="k" >
+	<input type="submit" value="     GOOD     " id="k" class="button button1"/></br>
+	</form>
+	&nbsp
+	<form action="{{ url_for('average') }}" method='POST' id="k">
+	<input type="submit" value="     AVERAGE     " id="k" class="button button1"/></br>
+	</form> 
+	&nbsp
+	<form action="{{ url_for('bad') }}" method='POST' id="k">
+	<input type="submit" value="       BAD       " id="k" class="button button1"/></br>
+	</form> 
+	&nbsp
+	<form action="{{ url_for('worst') }}" method='POST' id="k">
+	<input type="submit" value="    WORST    " id="k" class="button button1"/></br>
+	</form>  -->
+	
+	
+	</option>
+	</div> 
+</html>

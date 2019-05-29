@@ -1,0 +1,51 @@
+<html>
+<h1> welcome to the rating window </h1>
+<style>
+#k
+{
+	
+	visibility:visible;
+	text-align:center;
+	
+	float:left;
+	height: 50px;
+	width: 100 px;
+	background-color: #D3D3D3;
+	border-radius: 45%;
+	border:2px solid black;
+	border-color:black;
+	-webkit-text-stroke-width:1px;
+	-webkit-text-stroke-color:black;
+}
+
+</style>
+<!--<select>
+	<!--<option value="good">GOOD</option>
+	<option value="very good"> VERY GOOD</option>
+	<option value="excellent">excellent</option>
+	<option value="bad">BAD</option>
+	<option value="worst">WORST</option>-->
+	<option >
+	<form action="{{ url_for('excellent') }}" method='POST' id="k" align="center">
+	<input type="submit" value="EXCELLENT" id="k"/></br>
+	</form> 
+	
+	<form action="{{ url_for('best') }}" method='POST' id="k">
+	<input type="submit" value="     GOOD     " id="k"/></br>
+	</form>
+	&nbsp
+	<form action="{{ url_for('average') }}" method='POST' id="k">
+	<input type="submit" value="     AVERAGE     " id="k"/></br>
+	</form> 
+	&nbsp
+	<form action="{{ url_for('bad') }}" method='POST' id="k">
+	<input type="submit" value="       BAD       " id="k"/></br>
+	</form> 
+	&nbsp
+	<form action="{{ url_for('worst') }}" method='POST' id="k">
+	<input type="submit" value="    WORST    " id="k"/></br>
+	</form> 
+	
+	
+	</option>
+</html>

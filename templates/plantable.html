@@ -1,0 +1,104 @@
+<!-- <!DOCTYPE>
+<html>
+<style>
+body
+{
+	
+}
+table
+{
+	
+	margin-top:50px;	
+
+}
+h3
+{
+	color:black;
+}
+</style>
+<body>
+<table border="2" align=center  width= "800px" height="100 px">
+<thead>
+<h1 align="center">DATA PLANS</h1>
+
+<td><h3>NETWORK</h3></td>
+
+<td><h3>PRICE</h3></td>
+<td><h3>PACK VALUE</h3></td>
+
+</thead>
+{% for row in rows %}
+	<tr>
+		<td>{{ row["name"] }}</td>
+		
+		<td>{{ row["price"] }}</td>
+		
+		<td>{{ row["data"] }}</td>
+		
+		
+		
+	</tr>
+{% endfor %}
+</table>
+<a align="center" href="/enter">go back</a>
+</body>
+</html>
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers thead {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: black;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+<table id="customers">
+<thead>
+<h1 align="center">DATA PLANS</h1>
+
+<td><h3>NETWORK</h3></td>
+
+<td><h3>PRICE</h3></td>
+<td><h3>PACK VALUE</h3></td>
+
+</thead>
+{% for row in rows %}
+	<tr>
+		<td>{{ row["name"] }}</td>
+		
+		<td>{{ row["price"] }}</td>
+		
+		<td>{{ row["data"] }}</td>
+		
+		
+		
+	</tr>
+{% endfor %}
+</table>
+</table>
+
+</body>
+</html>

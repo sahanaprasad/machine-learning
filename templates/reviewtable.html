@@ -1,0 +1,64 @@
+<!DOCTYPE>
+<html>
+<style>
+
+	.two{
+        background-color: red;
+		background-image: linear-gradient(to left, crimson , white);
+      }
+     
+      .one{
+        background-color: springGreen;
+		background-image:linear-gradient(to right, LimeGreen , white);
+      }
+body
+{
+	
+}
+table
+{
+	
+	margin-top:50px;	
+
+}
+h3
+{
+	color:black;
+}
+</style>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<table border="2" align=center  width= "800px" height="100 px">
+<thead>
+<h1 align="center">REVIEWS</h1>
+
+<td><h3>USER NAME</h3></td>
+
+<td><h3>NETWORK</h3></td>
+<td><h3>REVIEW</h3></td>
+<td><h3>SENTIMENTAL ANALYSIS</h3></td>
+</thead>
+{% for row in rows %}
+	<tr>
+		
+		<td>{{ row["email"] }}</td>
+		
+		<td>{{ row["net"] }}</td>
+		<td>{{ row["review"] }}</td>
+		<td>{{ row["res"] }}</td>
+		
+	</tr>
+<script type="text/javascript">
+         $(document).ready(function(){
+           $("td").filter(function(index) {
+            return $(this).html() == "NEGATIVE";
+          }).parent().addClass("two");
+         });
+         $("td:contains('POSITIVE')").parent().addClass("one");
+		 $("td:contains('NEGATIVE')").parent().addClass("zero");
+      </script>
+{% endfor %}
+</table>
+<a align="center" href="/enter">go back</a>
+</body>
+</html>

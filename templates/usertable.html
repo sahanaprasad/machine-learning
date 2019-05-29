@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html>
+<style>
+body
+{
+	
+}
+table
+{
+	
+	margin-top:50px;	
+
+}
+h3
+{
+	color:black;
+}
+</style>
+<body>
+<table border="2" align=center  width= "800px" height="100 px">
+<thead>
+<h1 align="center">REVIEWS</h1>
+
+<td><h3>USER NAME</h3></td>
+
+<td><h3>EMAIL</h3></td>
+<td><h3>DATE OF BIRTH</h3></td>
+<td><h3>NETWORK</h3></td>
+</thead>
+{% for row in rows %}
+	<tr>
+		<td>{{ row["name"] }}</td>
+		
+		<td>{{ row["email"] }}</td>
+		
+		<td>{{ row["dob"] }}</td>
+		<td>{{ row["net"] }}</td>
+		
+		
+	</tr>
+{% endfor %}
+</table>
+<a align="center" href="/enter">go back</a>
+</body>
+</html>

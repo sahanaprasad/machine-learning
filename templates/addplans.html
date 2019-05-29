@@ -1,0 +1,111 @@
+<!DOCTYPE>
+<html>
+<style>
+
+
+.box {
+  margin: 20px auto;
+  width: 400px; 
+  height: 600px; 
+  -webkit-border-radius: 8px/7px; 
+  -moz-border-radius: 8px/7px; 
+  border-radius: 8px/7px; 
+  background-color:white; 
+  -webkit-box-shadow: 1px 2px 5px #006400; 
+  -moz-box-shadow: 1px 2px 5px #006400; 
+  box-shadow: 1px 2px 5px #006400; 
+  border: solid 1px #73AD21;
+}
+body
+{
+	background-color:white;
+}
+h3
+{
+	color:black;
+		
+}
+#s{
+  margin-top: 0px;
+  margin-left: 25%;
+  margin-right:25%;
+  border-radius: 8px/7px;
+  border: 2px solid #73AD21;
+  padding: 20px; 
+  width: 225px;
+  height: 100px; 
+  box-shadow: 1px 2px 5px #006400; 
+  
+
+}
+#u{
+  margin-top: 0px;
+  margin-left: 25%;
+  margin-right:25%;
+  border-radius: 8px/7px;
+  border: 2px solid #73AD21;
+  padding: 20px; 
+  width: 225px;
+  height: 05px; 
+  box-shadow: 1px 2px 5px #006400; 
+  
+
+}
+t{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left:25%;
+}
+.t1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  margin-left:45%;
+  margin-top:5%;
+}
+
+.t1:hover {
+	opacity: 1;
+  background-color: #4CAF50;
+  color: white;
+}
+
+</style>
+<body>
+<h3 align="center">ADD PLANS</h3>
+<div class="box">
+        
+
+<form action="{{ url_for('storeplans') }}" method='POST'>
+
+ <h4 align="center">NETWORK NAME</h4>
+<input type="text" id="U" align="center"  value={{msg1}} name="name"/></br>
+
+
+ <h4 align="center">PRICE</h4>
+<textarea type="integer" name="price" id="s" align="center" placeholder="ENTER THE PRICE" height="10px"/></textarea>
+
+<h4 align="center">VALUE</h4>
+<textarea type="text" name="data" id="s" align="center" placeholder="ENTER THE VALUE" height="10px"/></textarea>
+<input type="submit" value="SUBMIT" id="t" class="t t1"	/></br>
+<!-- </fieldset> -->
+</form>
+</div>
+
+
+</body>
+</html>
+
+
+
+

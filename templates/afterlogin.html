@@ -1,0 +1,160 @@
+<!-- <html>
+<style>
+body
+{
+	background-image: url('/static/2.jpg'); 	
+}
+table
+{
+	
+	margin-top:50px;	
+
+}
+h1{align:center;color:blue;-webkit-text-stroke-width:1.5px;-webkit-text-stroke-color:white;}
+#k
+{
+
+	visibility:visible;
+	text-align:center;
+	font-size:25pt;
+}
+h2
+{	
+	
+	color:black;
+}
+
+.btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+<body>
+
+
+<h3 align="right">{{msg3}}</h3>
+
+<h3 align="right">{{name}}</h3><h4 align="right"><a href="/logout"><font color="red">logout</a></h4>
+<div class="btn-group">
+		<button><a href="/reviewnet/{{name}}/{{net}}" class="button">REVIEW NETWORK</a></button>
+        <!-- <a href="/reviewnet/{{name}}/{{net}}">REVIEW NETWORK</a> -->
+		<!-- <button><a href="/plans/{{net}}" class="button">VIEW DATA PLANS</a></button>
+		<button><a href="#" class="button">VIEW OFFERS</a></button>
+		<!-- <a href="/plans/{{net}}">VIEW PLANS</a> -->
+	
+<!-- </div>	
+<br></br>
+
+</body>
+</html> -->
+ 
+ <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 50px;}
+  .sidenav a {font-size: 18px;}
+}
+h4{
+	background-color:gray;
+	color:Black;
+	}
+h1{
+	margin-top:10px;
+}
+</style>
+</head>
+<body>
+<a href="#" align="left">{{ msg3 }}</a>
+<p><a href="#" align="left" >{{ name }}</a></p>
+<div class="sidenav">
+  <!-- <h4>{{ msg3 }}</h4>
+  <h4>{{ name }}</h4> -->
+  
+ 
+  <a href="/">HOME</a>
+  <hr>
+  <a href="/reviewnet/{{name}}/{{net}}">REVIEW NETWORK</a>
+  <hr>
+  <a href="/plans/{{net}}">DATA PLANS</a>
+  <hr>
+  <a href="/allplans">OTHER DATA PLANS</a>
+  <hr>
+  <a href="/offer/{{ net }}">OFFERS</a>
+  <hr>
+  <a href="/alloffers">OTHER OFFERS</a>
+  <hr>
+  <a href="/usereviewparticular/{{ net }}">VIEW NETWORK REVIEWS</a>
+  <hr>
+  <a href="https://www.airtel.in/prepaid-recharge/">RECHARGE</a>
+  <hr>
+  <a href="/">LOGOUT</a>
+  <hr>
+</div>
+
+<div class="main">
+  <h2 align="center">WELCOME {{ msg3 }}</h2>
+<img src="/static/200.jpg" style="width:100%;height:100%">
+
+</div>
+   
+</body>
+</html> 
